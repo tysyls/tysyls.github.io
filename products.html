@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - BioAgNetwork</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>BioAgNetwork</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Products Section -->
+  <section class="products">
+    <div class="container">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product">
+          <h3>EcoTea Seed Dressing</h3>
+          <p>Supports early root development and soil health.</p>
+          <button onclick="showReviewForm('EcoTea Seed Dressing')">Leave a Review</button>
+          <div class="reviews" id="EcoTea Seed Dressing-reviews">
+            <h4>Reviews</h4>
+            <ul>
+              <li>"Great product! Improved my crop yield." - Farmer John</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+          <h3>HDI In-Furrow</h3>
+          <p>Enhances nutrient uptake and plant growth.</p>
+          <button onclick="showReviewForm('HDI In-Furrow')">Leave a Review</button>
+          <div class="reviews" id="HDI In-Furrow-reviews">
+            <h4>Reviews</h4>
+            <ul>
+              <li>"Highly effective and easy to use." - Agronomist Jane</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+          <h3>Residue Digestor</h3>
+          <p>Accelerates organic matter breakdown.</p>
+          <button onclick="showReviewForm('Residue Digestor')">Leave a Review</button>
+          <div class="reviews" id="Residue Digestor-reviews">
+            <h4>Reviews</h4>
+            <ul>
+              <li>"Perfect for regenerative farming." - Farmer Mike</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review Form (Hidden by Default) -->
+  <div id="review-form" class="review-form">
+    <div class="container">
+      <h3>Leave a Review</h3>
+      <form onsubmit="submitReview(event)">
+        <label for="product-name">Product:</label>
+        <input type="text" id="product-name" readonly>
+        <label for="reviewer-name">Your Name:</label>
+        <input type="text" id="reviewer-name" required>
+        <label for="review-text">Your Review:</label>
+        <textarea id="review-text" required></textarea>
+        <button type="submit">Submit Review</button>
+        <button type="button" onclick="hideReviewForm()">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BioAgNetwork. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Link to JavaScript -->
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>
